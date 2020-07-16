@@ -1,0 +1,173 @@
+{
+    "editor.fontFamily": "Ricty, メイリオ",
+    "editor.fontWeight": "500",
+    "editor.renderControlCharacters": true,
+    "editor.formatOnType": true,
+    "extensions.autoUpdate": false, //今回の原因となった自動アプデをしない
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "make_ptex2pdf",
+            "tools": [
+                "ptex2pdf",
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [ //タイプセットに使うtool一覧
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "ptex2pdf", //ptex2pdf自体の設定はこれまでと一緒
+            "command": "ptex2pdf",
+            "args": [
+                "-interaction=nonstopmode",
+                "-l",
+                "-ot",
+                "-kanji=utf8 -synctex=1",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "ctrlchar-remover.pattern": "[\\u0008]",
+    "breadcrumbs.enabled": true,
+    "typescript.suggest.enabled": false,
+    "autoDocstring.docstringFormat": "numpy",
+    "autoDocstring.quoteStyle": "'''",
+    "terminal.integrated.rendererType": "dom",
+    "terminal.external.windowsExec": "C:\\WINDOWS\\System32\\wsl.exe",
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.shellArgs.osx": [
+        "-l"
+    ],
+    "diffEditor.ignoreTrimWhitespace": true,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "workbench.colorTheme": "Dracula Soft",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "markdownlint.customRules": [
+        "{docsmsft.docs-markdown}/markdownlint-custom-rules/rules.js"
+    ],
+    "files.associations": {
+        "*.md": "markdown",
+        "*.vue": "vue",
+        "*.yml": "yaml"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "C_Cpp.clang_format_style": "{BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
+    "[cpp]": {
+        "editor.tabSize": 4,
+    },
+    "[c]": {
+        "editor.wrappingColumn": 128,
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+    },
+    "latex-workshop.latex.autoBuild.run": "never",
+    "files.eol": "\r\n",
+    "markdown-toc.insertAnchor": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.minimap.enabled": false,
+    "latex-workshop.chktex.enabled": true,
+    "latex-workshop.chktex.args.active": [
+        "-wall",
+        "-n22",
+        "-n30",
+        "-e16",
+        "-q",
+        "-n8",
+        "-n19",
+    ],
+    "editor.formatOnSaveTimeout": 5000,
+    "php-cs-fixer.allowRisky": true,
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+    "php-cs-fixer.lastDownload": 1593578672395,
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {},
+        "FIXME": {}
+    },
+    "todo-tree.highlights.defaultHighlight": {
+        "foreground": "green",
+        "type": "none"
+    },
+    "python.linting.flake8Path": "/home/ubuntu/.pyenv/shims/flake8",
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=120",
+        "--ignore=E501",
+        "--ignore=W293, W504",
+    ],
+    "python.formatting.provider": "yapf",
+    "python.formatting.yapfPath": "/home/ubuntu/.pyenv/shims/yapf",
+    "python.formatting.yapfArgs": [
+        "--style",
+        "{based_on_style: google, indent_width: 4, COLUMN_LIMIT: 120}",
+    ],
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.python",
+    },
+    "python.languageServer": "Pylance",
+    "python.defaultInterpreterPath": "/usr/local/var/pyenv/versions/3.6.2/bin/python",
+    "python.jediEnabled": false,
+    "[css]": {
+        "editor.defaultFormatter": "satokaz.vscode-bs-ctrlchar-remover"
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "liveshare.presence": false,
+    "gitlens.views.repositories.files.layout": "list",
+    "[latex]": {
+        "editor.defaultFormatter": "James-Yu.latex-workshop"
+    },
+    "todo-tree.tree.showScanModeButton": false,
+    "prettier.packageManager": "yarn",
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": false
+    },
+    "aws.samcli.location": "/usr/local/bin/sam",
+    "aws.profile": "profile:default",
+    "editor.fontSize": 16,
+    "files.autoSave": "afterDelay",
+    "remote.SSH.remotePlatform": {
+        "lenovo": "linux"
+    }
+}
